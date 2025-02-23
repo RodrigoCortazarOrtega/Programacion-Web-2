@@ -17,8 +17,8 @@ let numeroMaquina=Math.floor(Math.random()*(10-1)-1);
 console.log("Numero aleatorio: "+numeroMaquina);
 let vidas=4;
 while(numeroMaquina!=numeroUser && vidas>1){
-    vidas--;
     numeroUser=parseInt(prompt("Vida disponibles: "+vidas+".  Adivina el numero"));
+    vidas--;
 }
 
 if(numeroUser==numeroMaquina){
