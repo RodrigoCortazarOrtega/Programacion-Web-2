@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Qr</title>
+    <link href="tarea.css" rel="stylesheet">
+</head>
+<body>
+    <div id="contenedor-form">
+        <form id="formulario" >
+            <label for="mensaje">Mensaje a enviar:</label>
+            <textarea id="mensaje" type="text" rows="5" required placeholder="Ingresa Mensaje" class="inputs"></textarea>
+            <label for="numero">Ingresa WhatsApp:</label>
+            <input id="numero" type="tel" required placeholder="5544332211" class="inputs">
+            <button id="boton" type="submit">Generar Qr</button>
+        </form>
+    </div>
+    <div id="div-qr"></div>
+    <script src="tarea.js"></script>
+</body>
+</html>
