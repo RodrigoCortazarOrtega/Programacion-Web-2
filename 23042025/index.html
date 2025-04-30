@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
+    <link href="estilos.css" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="calculadora-contenedor">
+        <div class="pantalla-contenedor">
+            <input id="pantalla" disabled placeholder="..." >
+            <div id="estado"></div>
+            <input id="encendido" type="button" value="On/Of" onclick="arranque()">
+            <label id="marca">NombreMarca</label>
+        </div>
+
+        <input disabled class="btns" type="button" onclick="addElement('1')" value="1">
+        <input disabled class="btns" type="button" onclick="addElement('2')" value="2">
+        <input disabled class="btns" type="button" onclick="addElement('3')" value="3">
+        <input disabled class="btns" type="button" onclick="borrarUltimo()" value="<-">
+        
+        <input disabled class="btns" type="button" onclick="addElement('4')" value="4">
+        <input disabled class="btns" type="button" onclick="addElement('5')" value="5">
+        <input disabled class="btns" type="button" onclick="addElement('6')" value="6">
+        <input disabled class="btns" type="button" onclick="addElement('+')" value="+">
+        
+        <input disabled class="btns" type="button" onclick="addElement('7')" value="7">
+        <input disabled class="btns" type="button" onclick="addElement('8')" value="8">
+        <input disabled class="btns" type="button" onclick="addElement('9')" value="9">
+        <input disabled class="btns" type="button" onclick="addElement('-')" value="-">
+        
+        <input disabled class="btns" type="button" onclick="addElement('/')" value="/">
+        <input disabled class="btns" type="button" onclick="addElement('0')" value="0">
+        <input disabled class="btns" type="button" onclick="addElement('*')" value="*">
+        <input disabled class="btns" type="button" onclick="obtenerResultado()" value="=">
+
+
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

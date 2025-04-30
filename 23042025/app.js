@@ -1,20 +1,37 @@
-let pantalla= document.getElementById("pantalla");
-let datos="";
-let agregarPantalla=(v)=>{
-    datos+=v;
-    pantalla.value=datos;
-}
-let limpiar=()=>{
-    datos="";
-    pantalla.value="";
+let led = document.getElementById("estado");
+let inputs =document.getElementsByClassName("btns");
+let edo=false;
+let pantalla=document.getElementById("pantalla");
+let arranque = ()=>{
+    if(edo){
+        edo=false;
+        led.style="background-color:red;";
+        pantalla.value="";
+        for(let i=0; i<inputs.length;i++){
+            inputs[i].disabled=true;
+        }
+    }else{
+        edo=true;
+        led.style="background-color:green;";
+        for(let i=0; i<inputs.length;i++){
+            inputs[i].disabled=false;
+        }
+    }
 }
 
-let calcular=()=>{
+let addElement=(e)=>{
+    pantalla.value+=e;
+}
+let obtenerResultado=()=>{
     try{
-        let result=eval(pantalla.value);//Toma los elementos
-        pantalla.value=result;
+        if(pantalla.value.length>0){
+            pantalla.value=eval(pantalla.value);
+        }
     }catch{
-        pantalla.value="ERROR";
-        datos="";
+        alert("Error en  definicion de operacion");
+        pantalla.value="";
     }
+}
+let borrarUltimo=()=>{
+    pantalla.value=pantalla.value.substring(0, pantalla.value.length-1)
 }
